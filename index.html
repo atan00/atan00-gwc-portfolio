@@ -46,6 +46,11 @@
       padding: 5px;
       margin-left: 20px;
     }
+    #p2
+    {
+      color: white;
+      font-family: monospace;
+    }
     a:link
     {
       color:black;
@@ -79,26 +84,59 @@
       font-family: monospace;
     }
 
-    <!-- Set the style of the table -->
-   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    /* Add a black background color to the top navigation */
+    .topnav {
+      background-color: black;
+      overflow: hidden;
+    }
 
-     body{
-       color: inherit;
-       font-family: monospace;
-     }
-     table, th, td{
-       border: 2px solid white;
-       border-collapse: collapse;
-       padding: 15px;
-       text-align: center;
-       vertical-align: middle;
-       color: white
-     }
-     th  {
-       background-color: gray
-     }
-     tr:hover {background-color: gray}
+/* Style the links inside the navigation bar */
+    .topnav a {
+      background-color: black;
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
 
+/* Change the color of links on hover */
+    .topnav a:hover {
+      background-color: silver;
+      color: black;
+    }
+
+/* Add a color to the active/current link */
+    .topnav a.active {
+      background-color: black;
+      color: white;
+    }
+
+    /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+    @media screen and (max-width: 600px) {
+      .topnav a:not(:first-child) {display: none;}
+      .topnav a.icon {
+        float: right;
+        display: block;
+      }
+    }
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+    @media screen and (max-width: 600px) {
+      .topnav.responsive {position: relative;}
+      .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+      }
+    }
   </style>
 </head>
 
@@ -106,84 +144,19 @@
 
   <h1 id="h1">autumn tan</h1>
 
-  <center><img src="http://hunsci.com/data/out/249/1003372.jpg" alt="a photo of me" style="width:600px;height:360px"></center>
-
-  <hr color=silver>
-
-  <h2 id="h21">likes.</h2>
-  <p id="p">eating<br>sleeping<br>binge-watching youtube vids<br>reading<br>contemplating life<br>listening to music</p>
-
-  <h2 id="h21">dislikes.</h2>
-  <p id="p">heights<br>soggybread<br>spiders<br>most flying insects<br>celery</p>
-
-  <hr color=silver>
-
-  <h2 id="h21">fun facts.</h2>
-  <p id="p">i like bunnies.<br>i am super duper experienced in code!! totally!! 100%!! you should definitely believe that!!<br>i almost always sleep after 12 am.</p>
-
-  <hr color=silver>
-
-  <h2 id="h21">my fave places on the web.</h2>
-  <a href="https://www.facebook.com/">facebook</a>
-  <p id="p1">for obvious reasons</p>
-  <a href="https://www.cnn.com">cnn</a>
-  <p id="p1">at least try to stay informed about the outside world</p>
-  <a href="https://www.buzzfeed.com/quiz">buzzfeed quizzes</a>
-  <p id=p1>waste at least 2 hours online!</p>
-
-  <hr color=silver>
-
-  <!-- Table starts here-->
-  <div style ="overflow-x:auto;">
-    <table style="width:90%; margin:1em auto">
-
-      <!-- Define the first row of the table -->
-      <tr style = "font-family:monospace">
-        <th>core4 concept</th>
-        <th>technical definition</th>
-        <th>real-life analogy</th>
-        <th>python example</th>
-        <th>scratch example</th>
-      </tr>
-
-      <!-- Fill in the row for Variables -->
-      <tr style = "font-family:monospace">
-      <td><b>variables</b></td>
-        <td>a variable, as opposed to a constant, is a value that can change. usually, it is assigned a value by the programmer or through input.</td>
-        <td>a variable is similar to cubby-holes - items can be "assigned" or put into a cubby-hole.</td>
-        <td><img src="variable_python.jpg" alt="a variable in python" style="width:500px;height:200px"></td>
-        <td><img src="scratchvariables.PNG" alt="a variable in scratch" style="width:400px;height:180px"></td>
-      </tr>
-
-      <!-- Fill in the row for Loops -->
-      <tr style = "font-family:monospace">
-        <td><b>loops</b></td>
-        <td>a loop is a set of code that leads to repeated behavior when the code is run - the code is repeated until a certain condition is reached.</td>
-        <td>a loop is similar to telling a devie to repeat a song for a set number times.</td>
-        <td><img src="loop_py.PNG" alt="a loop in python" style="width:500px;height:200px"></td>
-        <td><img src="scratchloop.PNG" alt="a loop in scratch" style="width:400px;height:200 px"></td>
-      </tr>
-
-      <!-- Fill in the row for Conditionals -->
-      <tr style = "font-family:monospace">
-        <td><b>conditionals</b></td>
-        <td>a conditional is a function that performs a set of code based on certain conditions, such as user input.</td>
-        <td>a conditional is similar to a forked road - each path will lead to different results.</td>
-        <td><img src="conditional_py.PNG" alt="a conditional in python" style="width:500px;height:400px"></td>
-        <td><img src="scratchconditionals.PNG" alt="a conditional in scratch" style="width:400px;height:400px"></td>
-      </tr>
-
-      <!-- Fill in the row for Functions -->
-      <tr style = "font-family:monospace">
-        <td><b>functions</b></td>
-        <td>a function is a set of code that is defined by the programmer. it is generally used if a set of code is repeated throughout the program.</td>
-        <td>a function is similar to a decathlon; a decathlon is defined as a set of 10 different events, or "functions".</td>
-        <td><img src="function_py.PNG" alt="a function in python" style="width:500px;height:200px"></td>
-        <td><img src="scratchfunction.PNG" alt="a function in scratch" style="width:400px;height:180px"></td>
-      </tr>
-
-    </table>
+  <div class="topnav" id="myTopnav">
+    <a href="#home">home</a>
+    <a href="https://atan00.github.io/aboutme.html">about me</a>
+    <a href="#contact">contact</a>
+    <a href="#core4">core4</a>
   </div>
+
+  <center><img src="https://static.pexels.com/photos/120271/pexels-photo-120271.jpeg" alt="open your eyes to the world" style="width:600px;height:360px;padding:50px"></center>
+
+  <center><h1 id="h21">"don't lose hope. when it gets dark, the stars come out."</h1></center>
+  <center><p id="p2">- anonymous</p></center>
+
+  <hr color=silver>
 
 </body>
 </html>
